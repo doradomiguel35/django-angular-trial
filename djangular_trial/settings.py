@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'trial',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders',
 
 ]
 
@@ -50,7 +51,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',    
 ]
+
+CORS_ORIGIN_ALLOW_ALL =True
 
 ROOT_URLCONF = 'djangular_trial.urls'
 
